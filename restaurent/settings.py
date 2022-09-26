@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-9vc8g(#+91kj6n!%@oawjqw9^d24#2goi)goh#wwkeffz+un2)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["wiem-menu-1.herokuapp.com", "127.0.0.1"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     "rest_framework",
     'rest_framework.authtoken',  # add the auth token from the rest framework
+    'corsheaders',
 
     "rest_framework_swagger",
     "menu",
@@ -140,3 +141,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+CORS_ALLOW_ALL_ORIGINS = True
