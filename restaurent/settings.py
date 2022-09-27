@@ -142,3 +142,12 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 CORS_ALLOW_ALL_ORIGINS = True
+
+CORS_ALLOW_METHODS = [
+   'DELETE',
+   'GET',
+   'OPTIONS',
+   'PATCH',
+   'POST',
+   'PUT',
+]
