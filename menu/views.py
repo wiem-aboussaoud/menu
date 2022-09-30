@@ -46,7 +46,8 @@ class MenuListCollection(APIView):
 
 class MenuViewSet(viewsets.ModelViewSet):
     serializer_class = MenuSerializer
-
+    authentication_classes = (TokenAuthentication,)
+    permission_classes = (IsAuthenticated,)
     def get_queryset(self):
         return Menu.objects.all()
 
